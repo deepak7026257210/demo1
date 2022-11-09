@@ -1,13 +1,10 @@
 pipeline {
-    agent {
-        {
-        label 'slave'
-    }
- 
-}
+    agent any {
+     
 tools {
             maven '3.8.6'
-}
+       }
+    }
 
     stages {
         stage('clone repo') {

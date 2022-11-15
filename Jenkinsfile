@@ -1,10 +1,6 @@
 pipeline {
     agent any {
      
-tools {
-            maven '3.8.6'
-       }
-
     stages {
         stage('clone repo') {
             steps {
@@ -31,8 +27,8 @@ tools {
                 dir('simple-java-maven-app'){
                 sh './jenkins/scripts/deliver.sh'
                 }
-            }
-        }
+             }
+          }
     }
   }
 }
